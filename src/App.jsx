@@ -8,23 +8,23 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 
 function App() {
-
-  const routes=createBrowserRouter([
+  const routes = createBrowserRouter([
     {
-      path:'/',element:<Layout/>,children:[
-        {index:true,element:<Home/>},
-        {path:'/about',element:<About/>},
-        {path:'/contact',element:<Contact/>},
-        {path:'/portfolio',element:<Portfolio/>}
+      path: '/', 
+      element: <Layout />, 
+      children: [
+        { index: true, element: <Home /> },
+        { path: 'about', element: <About /> }, // شيلت السلاش اللي في الأول عشان الـ relative paths أفضل
+        { path: 'contact', element: <Contact /> },
+        { path: 'portfolio', element: <Portfolio /> }
       ]
     }    
-  ])
-
+  ], {
+    basename: "/srart-framework" // استبدل repoName باسم المستودع بتاعك بالظبط
+  });
 
   return (
-    <>
-    <RouterProvider router={routes}/>
-    </>
+    <RouterProvider router={routes} />
   )
 }
 

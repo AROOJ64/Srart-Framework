@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import Title from '../../Componants/Title/Title'
-import port1 from './../../assets/poert1.png'
+import poret1 from './../../assets/poert1.png'
 import port2 from './../../assets/port2.png'
 import port3 from './../../assets/port3.png'
 
 export default function Portfolio() {
-  const arr = [port1, port2, port3, port1, port2, port3]
+  const arr = [poret1, port2, port3, poret1, port2, port3]
   const [selectedImg, setSelectedImg] = useState(null)
 
   return (
@@ -14,6 +14,7 @@ export default function Portfolio() {
 
       <div className="py-5 mx-40 custom-padding grid md:grid-cols-2 lg:grid-cols-3 gap-12">
         {arr.map((img, index) => (
+          
           <div
             key={index}
             className="relative group rounded-xl overflow-hidden cursor-pointer"
