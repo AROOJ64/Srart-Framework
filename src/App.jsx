@@ -14,13 +14,13 @@ function App() {
       element: <Layout />, 
       children: [
         { index: true, element: <Home /> },
-        { path: 'about', element: <About /> }, // شيلت السلاش اللي في الأول عشان الـ relative paths أفضل
+        { path: 'about', element: <About /> }, 
         { path: 'contact', element: <Contact /> },
         { path: 'portfolio', element: <Portfolio /> }
       ]
     }    
   ], {
-    basename: "/srart-framework" // استبدل repoName باسم المستودع بتاعك بالظبط
+    basename: '/Srart-Framework/'
   });
 
   return (
